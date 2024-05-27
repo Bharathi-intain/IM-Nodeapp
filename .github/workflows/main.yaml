@@ -92,7 +92,7 @@ jobs:
         to: bharathi.m@intainft.com,narayanan.sp@intainft.com
         from: Github Actions ${{ secrets.MAIL_USERNAME }}
         #body: The Docker image intainft/im-testnetwork-node-app:${{ env.CUSTOM_VERSION }} was successfully built and deployed.
-        body: ${{ github.job }} job in workflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }} 
+        body: ${{ github.job }} job in workflow ${{ github.workflow }} of ${{ github.repository }} was build and Deployed.
         
   failure:
     runs-on: ubuntu-latest
@@ -110,4 +110,5 @@ jobs:
         subject: IM Nodeapp - Deployment failure
         to: bharathi.m@intainft.com,narayanan.sp@intainft.com
         from: Github Actions ${{ secrets.MAIL_USERNAME }}
-        body: The Docker image intainft/im-testnetwork-node-app:${{ env.CUSTOM_VERSION }} failed to build or deploy.
+        #body: The Docker image intainft/im-testnetwork-node-app:${{ env.CUSTOM_VERSION }} failed to build or deploy.
+        body: ${{ github.job }} job in workflow ${{ github.workflow }} of ${{ github.repository }} was build and Deployed.
